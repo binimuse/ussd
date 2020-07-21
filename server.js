@@ -63,7 +63,7 @@ app.post('*', (req, res) => {
     res.send(response)
   } 
   
-  else if (text == '1*1*1') {
+  else if (text == '1*3*1') {
 	  let response = `Confirmation message will be sent 
 								Thank you!!!`
 	   res.send(response)
