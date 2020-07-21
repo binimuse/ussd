@@ -52,6 +52,16 @@ app.post('*', (req, res) => {
 	2. +251923775330.usr on 30 km`
     res.send(response)
   } 
+  else if (text == '1*3') {
+    // This is a second level response where the user selected 1 in the first instance
+    let balance = 'NGN 10,000'
+    // This is a terminal request. Note how we start the response with END
+    let response = `CON Lada
+	please Choose driver
+	1. +251923798638.usr on 10 km
+	2. +251923775330.usr on 30 km`
+    res.send(response)
+  } 
   
   else if (text == '1*1*1') {
 	  let response = `Confirmation message will be sent 
