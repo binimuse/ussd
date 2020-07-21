@@ -56,6 +56,7 @@ app.post('*', (req, res) => {
   else if (text == '1*1*1') {
 	  let response = `Confirmation message will be sent 
 								Thank you!!!`
+	   res.send(response)
   }
   else {
     res.status(400).send('Bad request!')
