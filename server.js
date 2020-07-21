@@ -17,10 +17,17 @@ app.post('*', (req, res) => {
   if (text == '') {
     // This is the first request. Note how we start the response with CON
     let response = `CON Wellcome to Taxiye
-    1. Find Taxi
-    2. Cancel`
+    1. Passenger Menu
+    2. Driver Menu`
     res.send(response)
   } else if (text == '1') {
+    // Business logic for first level response
+    let response = `CON  
+    1. find taxi
+	2. cancel`
+    res.send(response)
+	
+	else if (text == '1*1') {
     // Business logic for first level response
     let response = `CON Choose Car 
     1. Taxiye normal
@@ -29,11 +36,18 @@ app.post('*', (req, res) => {
 	4. Bajaj
 	5. Bike`
     res.send(response)
+  }
+	
+	
   } else if (text == '2') {
-    // Business logic for first level response
-    res.status(400).send('Bad request!')
+    let response = `CON  
+    1. Avalable to give service
+	2. occupied
+	3. Confirm pick up
+	4. back
+	5. cancel`
     res.send(response)
-  } else if (text == '1*1') {
+  } else if (text == '1*1*1') {
     // Business logic for first level response
     let accountNumber = 'ACC1001'
     // This is a terminal request. Note how we start the response with END
@@ -42,7 +56,7 @@ app.post('*', (req, res) => {
 	1. +251923798638.usr on 10 km
 	2. +251923775330.usr on 30 km`
     res.send(response)
-  } else if (text == '1*2') {
+  } else if (text == '1*1*2') {
     // This is a second level response where the user selected 1 in the first instance
     let balance = 'NGN 10,000'
     // This is a terminal request. Note how we start the response with END
@@ -52,7 +66,7 @@ app.post('*', (req, res) => {
 	2. +251923775330.usr on 30 km`
     res.send(response)
   } 
-  else if (text == '1*3') {
+  else if (text == '1*1*3') {
     // This is a second level response where the user selected 1 in the first instance
     let balance = 'NGN 10,000'
     // This is a terminal request. Note how we start the response with END
@@ -63,7 +77,7 @@ app.post('*', (req, res) => {
     res.send(response)
   } 
   
-  else if (text == '1*1*1') {
+  else if (text == '1*1*1*1') {
 	  let response = `END Confirmation message will be sent 
 								Thank you!!!`
 	   res.send(response)
