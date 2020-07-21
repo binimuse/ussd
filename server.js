@@ -16,7 +16,7 @@ app.post('*', (req, res) => {
   let {sessionId, serviceCode, phoneNumber, text} = req.body
   if (text == '') {
     // This is the first request. Note how we start the response with CON
-    let response = `CON What would you want to check
+    let response = `CON Wellcome to Taxiye
     1. My Account
     2. My phone number`
     res.send(response)
