@@ -2,7 +2,7 @@ const app = require('express')()
 const bodyParser = require('body-parser')
 const logger = require('morgan')
 
-const port = process.env.PORT || 3030
+const port = process.env.PORT || 4005
 
 app.use(logger('dev'))
 app.use(bodyParser.json())
@@ -27,16 +27,7 @@ app.post('*', (req, res) => {
 	2. cancel`
     res.send(response)
   }
-	else if (text == '1*1') {
-    // Business logic for first level response
-    let response = `CON Choose Car 
-    1. Taxiye normal
-	2. Taxiye mini
-	3. Lada
-	4. Bajaj
-	5. Bike`
-    res.send(response)
-  }
+	
 	
 	
    else if (text == '2') {
@@ -47,7 +38,7 @@ app.post('*', (req, res) => {
 	4. back
 	5. cancel`
     res.send(response)
-  } else if (text == '1*1*1') {
+  } else if (text == '1*1') {
     // Business logic for first level response
     let accountNumber = 'ACC1001'
     // This is a terminal request. Note how we start the response with END
@@ -56,26 +47,8 @@ app.post('*', (req, res) => {
 	1. +251923798638.usr on 10 km
 	2. +251923775330.usr on 30 km`
     res.send(response)
-  } else if (text == '1*1*2') {
-    // This is a second level response where the user selected 1 in the first instance
-    let balance = 'NGN 10,000'
-    // This is a terminal request. Note how we start the response with END
-    let response = `CON Taxiye Mini
-	please Choose driver
-	1. +251923798638.usr on 10 km
-	2. +251923775330.usr on 30 km`
-    res.send(response)
   } 
-  else if (text == '1*1*3') {
-    // This is a second level response where the user selected 1 in the first instance
-    let balance = 'NGN 10,000'
-    // This is a terminal request. Note how we start the response with END
-    let response = `CON Lada
-	please Choose driver
-	1. +251923798638.usr on 10 km
-	2. +251923775330.usr on 30 km`
-    res.send(response)
-  } 
+  
   
   else if (text == '1*1*1*1') {
 	  let response = `END Confirmation message will be sent 
