@@ -39,7 +39,7 @@ app.post('*', (req, res) => {
   }
 	
 	
-  } else if (text == '2') {
+   else if (text == '2') {
     let response = `CON  
     1. Avalable to give service
 	2. occupied
