@@ -50,7 +50,7 @@ app.post('*', (req, res) => {
   } 
   
   
-  else if (text == '1*1*1*1') {
+  else if (text == '1*1*1') {
 	  let response = `END Confirmation message will be sent 
 								Thank you!!!`
 	   res.send(response)
