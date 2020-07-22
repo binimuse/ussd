@@ -24,7 +24,7 @@ app.post('*', (req, res) => {
     // Business logic for first level response
     let response = `CON  
     1. find taxi
-	2. cancel`
+	  2. cancel`
     res.send(response)
   }
 	
@@ -50,7 +50,7 @@ app.post('*', (req, res) => {
   } 
   
   
-  else if (text == '1*1*1*1') {
+  else if (text == '1*1*1') {
 	  let response = `END Confirmation message will be sent 
 								Thank you!!!`
 	   res.send(response)
