@@ -35,7 +35,7 @@ app.post('*', (req, res) => {
     1. Avalable 
 	2. occupied
 	3. Confirm pick up
-	4. back
+	
 	5. cancel`
     res.send(response)
   } else if (text == '1*1') {
