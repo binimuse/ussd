@@ -17,38 +17,44 @@ app.post('*', (req, res) => {
   if (text == '') {
     // This is the first request. Note how we start the response with CON
     let response = `CON Wellcome to Taxiye
-    1. Passenger Menu
-    2. Driver Menu`
+    1. enter you name`
     res.send(response)
-  } else if (text == '1') {
+  } else if (text != null) {
     // Business logic for first level response
     let response = `CON  
-    1. find taxi
-	  2. cancel`
+           enter you orgin
+	  enter 2. to cancel`
     res.send(response)
   }
-	
-	
-	
-   else if (text == '2') {
-    let response = `CON  
-    1. Avalable 
-	2. occupied
-	3. Confirm pick up
-	
-	5. cancel`
-    res.send(response)
-  } else if (text == '1*1') {
+   else if (text != null) {
     // Business logic for first level response
-    let accountNumber = 'ACC1001'
+    let accountNumber = 'did you mean bole around dembel'
     // This is a terminal request. Note how we start the response with END
-    let response = `CON Taxiye Normal
+    let response = `CON accountNumber
 	please Choose driver
-	1. +251923798638.usr on 10 km
-	2. +251923775330.usr on 30 km`
+	1. yes
+	2. no`
     res.send(response)
   } 
+   else if (text == '1') {
+    // Business logic for first level response
+    // Business logic for first level response
+    let response = `CON  
+           enter you destination
+	  enter 2. to cancel`
+    res.send(response)
   
+  }
+else if (text != null) {
+    // Business logic for first level response
+    let accountNumber = 'did you mean mexico around debrewerk'
+    // This is a terminal request. Note how we start the response with END
+    let response = `CON accountNumber
+	please Choose driver
+	1. yes
+	2. no`
+    res.send(response)
+  }   
   
   else if (text == '1*1*1') {
 	  let response = `END Confirmation message will be sent 
